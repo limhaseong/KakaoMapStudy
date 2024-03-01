@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MapTest02.html</title>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4027421d3d2c00eaab967e23ab9a2a37"></script>
+
+<script type="text/javascript">
+
+	function initialize()
+	{
+		container = document.getElementById("map");
+		
+		options = 
+		{
+				center: new kakao.maps.LatLng(37.5565532,126.9195086),	// 지도의 중심 좌표	 // 카카오가 다음을 먹으면서 daum도 살려놓긴 했으나, kakao가 최근꺼임
+				// new Scanner(); → 이는 import 구문에 java.util.Scanner 구문이 생성됨
+				// new java.util.Scanner();
+				level: 3,												// 지도의 확대축소 레벨
+		};
+		
+		// 지도를 그릴 대상 div 와 옵션을 넘겨주며 지도 생성
+		map = new kakao.maps.Map(container, options);
+	}
+
+</script>
+
+</head>
+<body onload="initialize()">
+
+<div>
+	<h1>Kakao Map 생성 기본 관찰</h1>
+	<p>지도 생성 기본 내용 관찰</p>
+	<hr />
+</div>
+
+<!-- ○ 발급받은 App Key -->
+<!-- 4027421d3d2c00eaab967e23ab9a2a37 -->
+<!-- ○ 지도의 중심 좌표 -->
+<!-- 37.5565532,126.9195086 -->
+
+<!-- 지도를 그릴 div 공간 확보(지정) -->
+<div id="map" style="width: 100%; height: 350px;"></div>
+
+
+</body>
+</html>
